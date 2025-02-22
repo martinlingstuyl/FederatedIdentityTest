@@ -23,7 +23,7 @@ jobs:
       - name: 'Install CLI'
         shell: pwsh
         run: |
-          npm install @martinlingstuyl/cli-microsoft365 -g
+          npm install @martinlingstuyl/cli-microsoft365@next -g
 
       - name: 'Connect using Federated Identity'
         shell: bash
