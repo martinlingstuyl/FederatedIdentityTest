@@ -21,7 +21,7 @@ jobs:
           node-version: 20
     
       - name: 'Install CLI'
-        run: "npm install @pnp/cli-microsoft365@next -g"
+        run: "npm install @martinlingstuyl/cli-microsoft365@next -g"
 
       - name: 'Get version'
         shell: pwsh
