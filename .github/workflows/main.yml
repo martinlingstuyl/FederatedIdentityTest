@@ -30,7 +30,7 @@ jobs:
       - name: 'Check stuff'
         shell: bash
         run: |
-          curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange"
+          curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=api://AzureADTokenExchange" | sed 's/./& /g'
 
       - name: 'Connect using Federated Identity'
         run: "m365 login --authType federatedIdentity --appId 5d245710-1423-4796-a1b6-da0620a85ac6 --tenant f49f84a7-ab01-4bb1-a232-f493dc13d988 --debug"
