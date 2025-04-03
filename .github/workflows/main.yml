@@ -28,7 +28,7 @@ jobs:
         run: "m365 version"
 
       - name: 'Connect using Federated Identity'
-        run: "m365 login --authType federatedIdentity --appId 5d245710-1423-4796-a1b6-da0620a85ac6 --tenant f49f84a7-ab01-4bb1-a232-f493dc13d988"
+        run: "m365 login --authType federatedIdentity --appId 5d245710-1423-4796-a1b6-da0620a85ac6 --tenant f49f84a7-ab01-4bb1-a232-f493dc13d988 --debug"
           
       - name: 'Get status'
         run: "m365 status"
